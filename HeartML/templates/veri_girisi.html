@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veri Girişi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #262626;
+            color: white;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #DC143B;
+            border-color: #DC143B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Veri Girişi</h2>
+        <form method="post" action="/veri_girisi">
+            <div class="form-group">
+                <label for="yas">Yaş:</label>
+                <input type="number" class="form-control" id="yas" name="yas" required>
+            </div>
+            <div class="form-group">
+                <label for="cinsiyet">Cinsiyet:</label>
+                <select class="form-control" id="cinsiyet" name="cinsiyet" required>
+                    <option value="0">Kadın</option>
+                    <option value="1">Erkek</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="kan_basinci">Kan Basıncı:</label>
+                <input type="number" class="form-control" id="kan_basinci" name="kan_basinci" required>
+            </div>
+            <div class="form-group">
+                <label for="kolesterol">Kolesterol:</label>
+                <input type="number" class="form-control" id="kolesterol" name="kolesterol" required>
+            </div>
+            <!-- Diğer gerekli veri giriş alanlarını da buraya ekleyebilirsiniz -->
+            <button type="submit" class="btn btn-primary">Hastalık Riskini Hesapla</button>
+        </form>
+    </div>
+</body>
+</html>
